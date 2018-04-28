@@ -2,18 +2,10 @@
 
 #include <iostream>
 
-struct A {
-    A() {
-        std::cin >> v;
-    }
-
-    uint32_t v;
-};
-
-A a;
-
 extern "C" {
     uint32_t get() {
-        return a.v;
+        uint32_t r;
+        std::cin >> r;
+        return r;
     }
 }
