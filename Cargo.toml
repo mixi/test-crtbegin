@@ -1,0 +1,9 @@
+[package]
+name = "test-crtbegin"
+version = "0.1.0"
+authors = ["Johannes Nixdorf <mixi@exherbo.org>"]
+
+[dependencies]
+
+[build-dependencies]
+cc = "*"
