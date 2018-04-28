@@ -1,11 +1,20 @@
-#include <sys/types.h>
+#include <cstdint>
+#include <cstdlib>
 
-#include <iostream>
+struct A {
+    A() {
+        v = (uint32_t*) malloc(sizeof(uint32_t));
+        if(v)
+            *v = 123;
+    }
+
+    uint32_t *v;
+};
+
+A a;
 
 extern "C" {
     uint32_t get() {
-        uint32_t r;
-        std::cin >> r;
-        return r;
+        return *a.v;
     }
 }
